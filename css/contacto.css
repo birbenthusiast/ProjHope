@@ -1,0 +1,159 @@
+html {
+    font-family: Special Elite;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Special Elite; 
+    background-color: black;
+    animation: rAnimation 10s linear infinite;
+    overflow: initial;
+    color: wheat;
+}
+
+span {
+    color: greenyellow;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    max-width: 80%;
+    width: auto;
+    height: 10px;
+    align-items: center;
+    padding: 50px 60px 50px;
+    background-color: black;
+    border-radius: 30px;
+    overflow: hidden;
+    text-align: center;
+    text-shadow: 0 0 1em currentColor;
+    font-family: 'Nosifer', sans-serif;
+    font-family: Special Elite;
+    box-shadow: 0 0 2em lime;
+    border-style: solid;
+    border-color: lime;
+    animation: rAnimation 10s linear infinite;
+    background: linear-gradient(90deg, black 20%, black 40%, springgreen 60%, black 80%, black 100%);
+    background-size: 200% 100%;
+
+
+
+
+}
+
+@keyframes rAnimation {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+#links-container {
+    display: flex;
+    align-items: center;
+}
+
+#links-container a {
+    font-size: 40px;
+    color: black;
+    text-decoration: none;
+    padding: 30px;
+    overflow: hidden;
+    display: inline-block;
+    transition: color 0.3s ease;
+    border-radius: 50px;
+}
+
+#links-container a:hover {
+    color: lime;
+    text-shadow: 0 0 10px lime, 0 0 40px lime, 0 0 80px lime;
+    transition: 0.3s ease-in-out;
+
+    transform: scale(1.2);
+}
+
+#formulario-container label{
+    color: wheat;
+    background-color: red;
+}
+
+body {
+    font-family: 'Special Elite', sans-serif;
+    background-color: black;
+    color: wheat;
+}
+
+main {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.formulario-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid yellowgreen;
+    border-radius: 5px;
+    background-color: black;
+    color: wheat;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: lime;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: yellowgreen;
+}
+
+@media (max-width: 950px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        max-width: 80%;
+    }
+
+    #links-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #links-container a {
+        margin: 0px;
+        padding: 5px;
+        display: inline;
+        position: relative;
+        font-size: 1.5rem;
+    }
+}
