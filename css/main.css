@@ -1,0 +1,358 @@
+/* Estilos generales comunes para main.css y contacto.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Special Elite', sans-serif;
+    background-color: black;
+    overflow: initial;
+    color: wheat;
+    height: 100%; /* Ajusta la altura del body al 100% del viewport */
+}
+
+span {
+    color: CRIMSON;
+}
+
+/* Header */
+header {
+    
+    display: flex;
+
+    justify-content: space-between;
+    margin: 10px auto;
+    max-width: 80%;
+    width: auto;
+    height: 10px;
+    align-items: center;
+    padding: 50px 60px 50px;
+    background-color: rgb(35, 35, 35);
+    border-radius: 30px;
+    overflow: hidden;
+    text-align: center;
+    text-shadow: 0 0 1em currentColor;
+    box-shadow: 0 0 2em CRIMSON;
+    border-style: solid;
+    border-color: CRIMSON;
+
+    transition: background 1s ease-in-out;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajusta el ancho al 100% del viewport */
+}
+
+header:hover {
+    background-position: 100% 0;
+    background-color: rgb(35, 35, 35);
+}
+
+
+#toggleButton {
+    background-color: rgb(35, 35, 35);
+    color: wheat;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#toggleButton:hover {
+    background-color: crimson;
+    color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sections-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.section {
+    width: calc(30% - 20px);
+    box-sizing: border-box;
+    height: calc(100vh - 20px);
+    overflow: hidden;
+    border: 2px solid white;
+    margin-right: 2%;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.section.active {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.section:hover {
+    cursor: pointer;
+}
+
+.section:not(.active) {
+    opacity: 0.7;
+}
+
+#links-container {
+    display: flex;
+    align-items: center;
+}
+
+#links-container a {
+    font-size: 40px;
+    color: black;
+    text-decoration: none;
+    padding: 30px;
+    overflow: hidden;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease; /* Agrega transform a la transición */
+    border-radius: 50px;
+}
+
+#links-container a:hover {
+    color: CRIMSON;
+    text-shadow: 0 0 10px CRIMSON, 0 0 40px CRIMSON, 0 0 80px CRIMSON;
+    transform: scale(1.2);
+}
+
+
+/* Estilos específicos para main.css */
+
+main {
+    max-width: 80%;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.caja {
+    margin: auto auto 10px;
+    padding: 10px 10px 10px;
+    max-width: 90%;
+    height: auto;
+    color: wheat;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+}
+
+.imagen-personal {
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: auto;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: CRIMSON;
+    box-shadow: 0 0 1em CRIMSON;
+}
+
+.intro {
+    margin-left: 100px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    background-color: black;
+    text-align: left;
+    color: wheat;
+    border-style: solid;
+    border-color: CRIMSON;
+    border-radius: 30px;
+    box-shadow: 0 0 1em CRIMSON;
+    transition: 0.5s linear;
+}
+
+.intro h1 {
+    margin: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.intro p {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.intro span {
+    font-weight: bold;
+}
+
+.intro:hover {
+    border-color: CRIMSON;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 3em CRIMSON;
+}
+
+/* Lenguajes */
+#lenguajesContainer,
+#conocimientosContainer,
+#habilidadesContainer {
+    max-height: 30px; 
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+#lenguajesContainer.hovered,
+#conocimientosContainer.hovered,
+#habilidadesContainer.hovered {
+    max-height: 500px; 
+}
+
+.lenguajes {
+    width: 100%;
+    margin: 20px 0; /* Espacio entre las secciones */
+    padding: 20px;
+    background-color: black;
+    color: wheat;
+    box-shadow: 0 0 1em CRIMSON;
+    border: 2px solid CRIMSON;
+    border-radius: 30px;
+    text-align: center;
+    transition: max-height 0.5s ease-in-out, background-color 0.5s ease-in-out; 
+}
+
+.lenguajes:hover {
+    border-color: CRIMSON;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 3em CRIMSON;
+    max-height: 1000px;
+    background-color: black; 
+}
+
+.lenguajes h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: CRIMSON;
+    background-color: black;
+    border: 2px solid CRIMSON;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+
+.lenguajes ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0px;
+    text-align: left; 
+}
+
+.lenguajes li {
+    transition: 0.5s ease-in-out;
+    font-size: 18px;
+    margin: 10px;
+    padding-left: 15px;
+    text-align: left; 
+}
+
+.lenguajes li:before {
+    content: "\2022";
+    color: CRIMSON;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    text-align: left;
+}
+
+.caja2{
+    margin: 0px 0px 0px;
+    padding: 5px;
+
+    display:block;
+
+
+}
+
+@keyframes levitar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 950px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        max-width: 80%;
+    }
+
+    #links-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #links-container a {
+        margin: 0px;
+        padding: 5px;
+        display: inline;
+        position: relative;
+        font-size: 1.5rem;
+    }
+
+    .caja {
+        margin: 0px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .intro {
+        margin: 10px;
+        padding: 10px;
+        display: block;
+        position: relative;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .imagen-personal {
+        align-items: center;
+    }
+
+    .caja2 {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .custom-eye {
+        position: absolute;
+        top: 123px;
+        left: 1px;
+    }
+
+    #lenguajesContainer {
+        max-height: 30px;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+    }
+    .lenguajes {
+        margin: 0px;
+        padding: 10px;
+        max-height: 300px;
+        background-color: transparent;
+    }
+
+    .lenguajes:hover {
+        border-color: CRIMSON;
+        transition: 0.5s ease-in-out;
+        box-shadow: 0 0 3em CRIMSON;
+        max-height: 1000px; 
+        background-color: black; 
+    }
+}
