@@ -4,14 +4,32 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Special Elite', sans-serif;
-    background-color: black;
     overflow: initial;
     color: wheat;
     height: 100%; /* Ajusta la altura del body al 100% del viewport */
 }
 
+body {
+    background-image: url('/img/fondos/123.jpg');
+    background-size:cover; /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
+}
+
+body::before {
+    content: ""; /* Necesario para que el pseudo-elemento exista */
+    position: fixed; /* Lo posiciona de forma fija en la ventana del navegador */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cubre todo el ancho de la ventana */
+    height: 100%; /* Cubre todo el alto de la ventana */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semitransparente (negro con 50% de opacidad) */
+    z-index: -1; /* Asegura que esté detrás del contenido */
+}
+
+    
 span {
-    color: CRIMSON;
+    color: #DCE81C;
 }
 
 .container {
@@ -29,11 +47,11 @@ header {
     justify-content: flex-start; /* Alinea el header a la izquierda */
     align-items: center; /* Centra verticalmente los elementos */
     padding: 10px 10px; /* Ajusta el relleno solo para arriba y abajo */
-    background-color: rgb(35, 35, 35);
+    background-color: #011459;
     border-radius: 30px;
-    box-shadow: 0 0 2em CRIMSON;
+    box-shadow: 0 0 2em #62DFFD;
     border-style: solid;
-    border-color: CRIMSON;
+    border-color: #62DFFD;
     transition: background 1s ease-in-out;
     position: fixed;
     top: 0;
@@ -46,7 +64,7 @@ header {
 
 header:hover {
     background-position: 100% 0;
-    background-color: rgb(35, 35, 35);
+
 }
 
 
@@ -58,7 +76,7 @@ header:hover {
 
 #links-container a {
     font-size: 40px;
-    color: black;
+    color: #62DFFD;
     text-decoration: none;
     padding: 30px;
     overflow: hidden;
@@ -68,8 +86,8 @@ header:hover {
 }
 
 #links-container a:hover {
-    color: CRIMSON;
-    text-shadow: 0 0 10px CRIMSON, 0 0 40px CRIMSON, 0 0 80px CRIMSON;
+    color: #DCE81C;
+    text-shadow: 0 0 10px #DCE81C, 0 0 40px #DCE81C, 0 0 80px #DCE81C;
     transform: scale(1.2);
 }
 
@@ -107,8 +125,8 @@ main {
     margin: auto;
     border-radius: 30px;
     border-style: solid;
-    border-color: CRIMSON;
-    box-shadow: 0 0 1em CRIMSON;
+    border-color: #62DFFD;
+    box-shadow: 0 0 1em #62DFFD;
 }
 
 .caja {
@@ -119,6 +137,7 @@ main {
     overflow-wrap: break-word; /* Utiliza overflow-wrap en lugar de word-wrap */
     border-style: dotted;
     border-color: turquoise;
+    
 }
 
 .intro {
@@ -128,11 +147,12 @@ main {
     margin-bottom: 20px;
 
     text-align: left;
-    color: wheat;
+    color: #18B6D3;
+    background-color: #011459;
     border-style: solid;
-    border-color: CRIMSON;
+    border-color:#18B6D3;
     border-radius: 30px;
-    box-shadow: 0 0 1em CRIMSON;
+    box-shadow: 0 0 1em #18B6D3;
     transition: 0.5s linear;
     overflow-wrap: break-word; /* Utiliza solo overflow-wrap para ajustar el texto al contenedor */
 }
@@ -155,9 +175,9 @@ main {
 }
 
 .intro:hover {
-    border-color: CRIMSON;
+    border-color: #DCE81C;
     transition: 0.5s ease-in-out;
-    box-shadow: 0 0 3em CRIMSON;
+    box-shadow: 0 0 3em #DCE81C;
 }
 
 .desplegables{
@@ -188,29 +208,29 @@ main {
     width: 100%;
     margin: 20px; /* Espacio entre las secciones */
     padding: 20px 0px;
-    background-color: black;
-    color: wheat;
-    box-shadow: 0 0 1em CRIMSON;
-    border: 2px solid CRIMSON;
+    background-color: #011459;
+    color:#18B6D3;
+    box-shadow: 0 0 1em #18B6D3;
+    border: 2px solid #18B6D3;
     border-radius: 30px;
     text-align: center;
     transition: max-height 0.5s ease-in-out, background-color 0.5s ease-in-out; 
 }
 
 .desplegable:hover {
-    border-color: CRIMSON;
+    border-color: #DCE81C;
     transition: 0.5s ease-in-out;
-    box-shadow: 0 0 3em CRIMSON;
+    box-shadow: 0 0 3em #DCE81C;
     max-height: 1000px;
-    background-color: black; 
+    background-color:#011459; 
 }
 
 .desplegable h2 {
     font-size: 24px;
     font-weight: bold;
     margin: 10px 0;
-    color: CRIMSON;
-    background-color: black;
+    color: #18B6D3;
+    background-color: #011459;
 
     border-radius: 10px;
     text-align: center;
@@ -234,25 +254,13 @@ main {
 
 .desplegable li:before {
     content: "\2022";
-    color: CRIMSON;
+    color: #DCE81C;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
     text-align: left;
 }
 
-
-@keyframes levitar {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
 
 @media (max-width: 950px) {
     .container {
@@ -324,9 +332,8 @@ main {
     }
 
     .lenguajes:hover {
-        border-color: CRIMSON;
         transition: 0.5s ease-in-out;
-        box-shadow: 0 0 3em CRIMSON;
+        box-shadow: 0 0 3em;
         max-height: 1000px; 
         background-color: black; 
     }
